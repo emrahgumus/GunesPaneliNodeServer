@@ -3,7 +3,7 @@ extends layout
 block content
     div(class='jumbotron')
         div(class='container')
-            h1='Panel Takibi'
+            h1='Güneş Panelleri Takibi'
             p.
                 Bu sayfadan güneş panellerini listeleyebilir, panellere ait detayları takip edebilirsiniz.
                 Sayfadaki grafiklerden panellere ait akım, gerilim, ışık, sıcaklık ve nem
@@ -11,7 +11,7 @@ block content
 
     div(class='container')
         div(class='row')
-            div(class='col-md-4')
+            div(class='col-md-3')
                 h4 Panel Listesi
 
                 div(class='panel panel-default')
@@ -23,26 +23,57 @@ block content
                                 th İzle
                         tbody
 
+
                 h4(style='margin-top: 50px;') Tarih / Anlık Durum
                 div(id='datepicker')
 
-            div(class='col-md-8')
+            div(class='col-md-9')
                 h4(id="chartTitle") Son 1 Dakika
                 div(id='chartDiv')
-                div(class='row')
-                    button(id='current' type='button' class='btn btn-primary' style='margin-right:10px' onclick='changeSeries(this.id)') Akım
-                    button(id='voltage' type='button' class='btn btn-default' style='margin-right:10px' onclick='changeSeries(this.id)') Gerilim
-                    button(id='light' type='button' class='btn btn-default' style='margin-right:10px' onclick='changeSeries(this.id)') Işık
-                    button(id='temperature' type='button' class='btn btn-default' style='margin-right:10px' onclick='changeSeries(this.id)') Sıcaklık
-                    button(id='moisture' type='button' class='btn btn-default' style='margin-right:10px' onclick='changeSeries(this.id)') Nem
+
+
+    style.
+        .ui-datepicker{width:100%;}
 
 
     script.
+        /*
+         div(class='panel panel-default')
+         table(id='panelTable2' class='table table-striped table-hover')
+         thead
+         tr
+         th(style='width:26px;') #
+         th Değerler
+         th(style='width:45px;') İzle
+         tbody
+         tr
+         td 1
+         td Akım
+         td <button type="button" class="btn btn-primary btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="current"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="current_glyph"></span></button>
+         tr
+         td 2
+         td Gerilim
+         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="voltage"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="voltage_glyph"></span></button>
+         tr
+         td 3
+         td Işık
+         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="light"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="light_glyph"></span></button>
+         tr
+         td 4
+         td Sıcaklık
+         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="temperature"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="temperature_glyph"></span></button>
+         tr
+         td 5
+         td Nem
+         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="moisture"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="moisture_glyph"></span></button>
+         -
+                 */
         var chart = null;
         var selectedPanelId = null;
         var showCurrent = true;
         var seriesList = ['current', 'voltage', 'light', 'temperature', 'moisture'];
         var activeSeries = 'current';
+        var Series = {current:{series: 0}, voltage: {series: 1}, light: {series: 2}, temperature: {series: 3}, moisture: {series: 4}};
         var dataListOfTheHistorical = [];
 
         var socket = io();
@@ -68,7 +99,7 @@ block content
             if (!chart) {
                 chart = getChart();
             }
-
+            console.log(panelData);
             if (chart) {
                 updateChartWithCurrentData(panelData);
             }
@@ -81,6 +112,7 @@ block content
         });
 
         function addPanelToTable(index, panel) {
+
             var row = '<tr>';
             row += '<th scope="row">' + (index + 1) + '</th>';
             row += '<td>' + panel.name + '</td>';
@@ -136,24 +168,36 @@ block content
 
         function updateChartWithCurrentData(panelData) {
             var x = (new Date(panelData.date)).getTime();
-            var y = panelData[activeSeries];
-            var pointArr, point;
+            //var y = panelData[activeSeries];
 
-            var series = chart.series[0];
+            var pointArr;
 
-            if (series.data.length <= 20) {
-                pointArr = [];
+            if (chart.series[0].data.length == 0) {
 
-                for (var i = 0; i < series.data.length; i++) {
-                    point = series.data[i];
-                    pointArr.push([point.x, point.y]);
+                for (key in Series) {
+
+                    //if(Series[key].active == 1){
+
+                    pointArr = [];
+
+                    pointArr.push([x, panelData[key]]);
+
+                    chart.series[Series[key].series].setData(pointArr, true, true, true);
+
+                    //}
                 }
 
-                pointArr.push([x, y]);
+            }else if (chart.series[0].data.length <= 150) {
 
-                series.setData(pointArr, true, false, true);
+                for (key in Series) {
+
+                    chart.series[Series[key].series].addPoint([x, panelData[key]], true, false);
+                }
             } else {
-                series.addPoint([x, y], true, true);
+
+                for (key in Series) {
+                    chart.series[Series[key].series].addPoint([x, panelData[key]], true, true);
+                }
             }
         }
 
@@ -185,6 +229,9 @@ block content
             clickedBtn.addClass('btn-primary');
 
             activeSeries = id;
+
+            Series[id].active = (Series[id].active + 1) % 2;
+
             clearChart();
 
             if(!showCurrent) {
@@ -217,7 +264,7 @@ block content
 
         $('#chartDiv').highcharts({
             chart: {
-                type: 'area',
+                type: 'spline',
                 animation: Highcharts.svg,
                 ignoreHiddenSeries: false,
                 height: 400
@@ -231,32 +278,59 @@ block content
             yAxis: {
                 title: {
                     text: 'Değer'
+                },
+            },
+            plotOptions: {
+                spline: {
+                    lineWidth: 3,
+                    marker: {
+                        enabled: false
+                    },
                 }
             },
             tooltip: {
                 formatter: function () {
-                    return Highcharts.dateFormat('%d-%m-%Y %H:%M:%S', this.x) + '<br/>'
-                            + Highcharts.numberFormat(this.y, 2);
+                    return 'Tarih : '+Highcharts.dateFormat('%d-%m-%Y %H:%M:%S', this.x) + '<br/>'
+                            + 'Değer: ' + Highcharts.numberFormat(this.y, 2);
                 }
             },
             series: [{
+                name: 'Sıcaklık',
                 visible: true,
                 data: []
-            }],
+            }, {
+                name: 'Gerilim',
+                visible: false,
+                data: []
+            }, {
+                name: 'Işık',
+                visible: false,
+                data: []
+            }, {
+                name: 'Akım',
+                visible: false,
+                data: []
+            }, {
+                name: 'Nem',
+                visible: false,
+                data: []
+            },],
             legend: {
-                enabled: false
+                enabled: true
             }
         });
 
+        /* Veriler anlık görüntülenmek isteniyorsa bu fonksiyon çağırılıyor. */
         $.datepicker._gotoToday = function() {
             clearChart();
 
             var chartTitle = document.getElementById('chartTitle');
-            chartTitle.innerHTML = 'Son 1 Dakika';
+            chartTitle.innerHTML = 'Son 5 Dakika';
 
             showCurrent = true;
         }
 
+        /* Geçmişe dönük kayıtlar görüntülenmek isteniyorsa bu donk. çağırılıyor. */
         $('#datepicker').datepicker({
             maxDate: 0,
             currentText: 'Anlık Durum',

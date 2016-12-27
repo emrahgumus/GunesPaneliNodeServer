@@ -256,7 +256,7 @@ module.exports = function(io) {
                     panelId: veriler.panelId,
                     current: veriler.akim,
                     voltage: veriler.gerilim,
-                    light: 0,
+                    light: '15',
                     temperature: veriler.sicaklik,
                     moisture: veriler.nem,
                     date: new Date()
