@@ -270,9 +270,8 @@ module.exports = function(io) {
 
                 io.emit('retrievePanelData', newPanelData);
 
-                //res.render('OK');
             }else{
-                //res.render('error',{message: 'parametreler eksik.',error:{status:'500', stack:'ee'}});
+                console.log("HATA!");
             }
 
         });

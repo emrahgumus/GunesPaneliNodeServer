@@ -168,33 +168,22 @@ block content
 
         function updateChartWithCurrentData(panelData) {
             var x = (new Date(panelData.date)).getTime();
-            //var y = panelData[activeSeries];
 
             var pointArr;
 
             if (chart.series[0].data.length == 0) {
 
                 for (key in Series) {
-
-                    //if(Series[key].active == 1){
-
                     pointArr = [];
-
                     pointArr.push([x, panelData[key]]);
-
                     chart.series[Series[key].series].setData(pointArr, true, true, true);
-
-                    //}
                 }
 
             }else if (chart.series[0].data.length <= 150) {
-
                 for (key in Series) {
-
                     chart.series[Series[key].series].addPoint([x, panelData[key]], true, false);
                 }
             } else {
-
                 for (key in Series) {
                     chart.series[Series[key].series].addPoint([x, panelData[key]], true, true);
                 }
@@ -269,25 +258,10 @@ block content
                 ignoreHiddenSeries: false,
                 height: 400
             },
-            title: {
-                text: ''
-            },
-            xAxis: {
-                type: 'datetime'
-            },
-            yAxis: {
-                title: {
-                    text: 'Değer'
-                },
-            },
-            plotOptions: {
-                spline: {
-                    lineWidth: 3,
-                    marker: {
-                        enabled: false
-                    },
-                }
-            },
+            title: {text: ''},
+            xAxis: {type: 'datetime'},
+            yAxis: {title: {text: 'Değer'}},
+            plotOptions: {spline: {lineWidth: 3, marker: {enabled: false},}},
             tooltip: {
                 formatter: function () {
                     return 'Tarih : '+Highcharts.dateFormat('%d-%m-%Y %H:%M:%S', this.x) + '<br/>'
