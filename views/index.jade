@@ -37,47 +37,18 @@ block content
 
 
     script.
-        /*
-         div(class='panel panel-default')
-         table(id='panelTable2' class='table table-striped table-hover')
-         thead
-         tr
-         th(style='width:26px;') #
-         th Değerler
-         th(style='width:45px;') İzle
-         tbody
-         tr
-         td 1
-         td Akım
-         td <button type="button" class="btn btn-primary btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="current"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="current_glyph"></span></button>
-         tr
-         td 2
-         td Gerilim
-         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="voltage"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="voltage_glyph"></span></button>
-         tr
-         td 3
-         td Işık
-         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="light"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="light_glyph"></span></button>
-         tr
-         td 4
-         td Sıcaklık
-         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="temperature"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="temperature_glyph"></span></button>
-         tr
-         td 5
-         td Nem
-         td <button type="button" class="btn btn-default btn-xs" onclick="changeSeries(this.id)" aria-label="Left Align" id="moisture"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" id="moisture_glyph"></span></button>
-         -
-                 */
+
         var chart = null;
         var selectedPanelId = null;
         var showCurrent = true;
-        var seriesList = ['current', 'voltage', 'light', 'temperature', 'moisture'];
+        var seriesList = ['akim', 'gerilim', 'sicaklik', 'nem'];
         var activeSeries = 'current';
-        var Series = {current:{series: 0}, voltage: {series: 1}, light: {series: 2}, temperature: {series: 3}, moisture: {series: 4}};
+        var Series = {akim:{series: 0}, gerilim: {series: 1}, sicaklik: {series: 2}, nem: {series: 3}};
         var dataListOfTheHistorical = [];
 
         var socket = io();
 
+        /* Panelleri bu fonksiyon listeliyor. */
         socket.on('retrievePanelList', function (panelList) {
             $('#panelTable').find('> tbody > tr').remove();
 
@@ -90,6 +61,7 @@ block content
         });
 
         socket.emit('retrievePanelList', 0, false);
+
 
         socket.on('retrievePanelData', function (panelData) {
             if (selectedPanelId == null) return false;
@@ -111,29 +83,27 @@ block content
             updateChartWithHistoricalData();
         });
 
+        /* Panelleri tablo şeklinde ekranda gösteriyor. */
         function addPanelToTable(index, panel) {
 
             var row = '<tr>';
             row += '<th scope="row">' + (index + 1) + '</th>';
             row += '<td>' + panel.name + '</td>';
-
             row += '<td>';
             row += '<button type="button" class="btn btn-default btn-xs" aria-label="Left Align" id="' + panel._id.toString() + '_show">';
             row += '<span class="glyphicon glyphicon-eye-close" aria-hidden="true" id="' + panel._id.toString() + '_glyph"></span>';
             row += '</button>';
             row += '</td>';
-
             row += '</tr>';
-
             $('#panelTable').find('> tbody:last-child').append(row);
             $('#' + panel._id.toString() + '_show').click(function () {
                 showPanelDetail(panel);
             });
         }
 
+        /* Verileri gösterilecek panelleri seçiyoruz */
         function showPanelDetail(panel) {
             clearChart();
-
             $('#panelTable').find('button').removeClass('btn-success').addClass('btn-default');
             $('#' + panel._id.toString() + '_show').removeClass('btn-default').addClass('btn-success');
 
@@ -205,7 +175,7 @@ block content
             series.setData(pointArr, true, false, true);
         }
 
-        function changeSeries(id) {
+        /*function changeSeries(id) {
 
             for(var i = 0; i < seriesList.length; i++) {
                 var btn = $('#' + seriesList[i]);
@@ -226,22 +196,19 @@ block content
             if(!showCurrent) {
                 updateChartWithHistoricalData();
             }
-        }
+        }*/
 
         function getToday() {
             var today = new Date();
             var dd = today.getDate();
             var mm = today.getMonth() + 1; //January is 0!
             var yyyy = today.getFullYear();
-
             if (dd < 10) {
                 dd = '0' + dd
             }
-
             if (mm < 10) {
                 mm = '0' + mm
             }
-
             return mm + '/' + dd + '/' + yyyy;
         }
 
@@ -269,7 +236,7 @@ block content
                 }
             },
             series: [{
-                name: 'Sıcaklık',
+                name: 'Akım',
                 visible: true,
                 data: []
             }, {
@@ -277,18 +244,14 @@ block content
                 visible: false,
                 data: []
             }, {
-                name: 'Işık',
-                visible: false,
-                data: []
-            }, {
-                name: 'Akım',
+                name: 'Sıcaklık',
                 visible: false,
                 data: []
             }, {
                 name: 'Nem',
                 visible: false,
                 data: []
-            },],
+            }],
             legend: {
                 enabled: true
             }
@@ -304,7 +267,7 @@ block content
             showCurrent = true;
         }
 
-        /* Geçmişe dönük kayıtlar görüntülenmek isteniyorsa bu donk. çağırılıyor. */
+        /* Geçmişe dönük kayıtlar görüntülenmek isteniyorsa bu fonk. çağırılıyor. */
         $('#datepicker').datepicker({
             maxDate: 0,
             currentText: 'Anlık Durum',

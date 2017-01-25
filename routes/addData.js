@@ -21,11 +21,10 @@ module.exports = function(io) {
 
         var newPanelData = new PanelData({
             panelId: "575ddb75894fac5646cfe05c",
-            current: query.current,
-            voltage: query.voltage,
-            light: query.light,
-            temperature: query.temperature,
-            moisture: query.moisture,
+            akim: query.current,
+            gerilim: query.voltage,
+            sicaklik: query.light,
+            nem: query.temperature,
             date: query.date
         });
 

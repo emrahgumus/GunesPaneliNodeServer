@@ -5,9 +5,9 @@ var mongoose = require('mongoose');
 
 var panelSchema = mongoose.Schema({
     name: String,
-    countryCode: String,
-    cityCode: String,
-    coordinates: Array,
+    location: String,
+    macAddr: String,
+    ipAddr: String,
     status: Boolean
 });
 

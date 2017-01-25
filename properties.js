@@ -9,7 +9,7 @@ properties.http = {
 
 properties.db = {
     server: 'localhost',
-    database: 'GunesPaneli',
+    database: 'GunesPaneli2',
     username: null,
     password: null,
     port: '27017'

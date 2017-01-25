@@ -5,11 +5,10 @@ var mongoose = require('mongoose');
 
 var panelDataSchema = mongoose.Schema({
     panelId: mongoose.Schema.Types.ObjectId,
-    current: Number,
-    voltage: Number,
-    light: Number,
-    temperature: Number,
-    moisture: Number,
+    akim: Number,
+    gerilim: Number,
+    sicaklik: Number,
+    nem: Number,
     date: Date
 });
 

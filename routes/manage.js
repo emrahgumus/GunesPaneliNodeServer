@@ -74,7 +74,7 @@ module.exports = function(io) {
             this.panelMap[panel._id] = undefined;
         };
 
-        this.startDataCreate = function() {
+        /*this.startDataCreate = function() {
             var me = this;
             this.timer = setInterval(function(){
                 for (key in me.panelMap) {
@@ -103,7 +103,7 @@ module.exports = function(io) {
             }, 500);
 
             creationStatus = true;
-        };
+        };*/
 
         this.stopDataCreate = function() {
             clearInterval(this.timer);
@@ -127,7 +127,7 @@ module.exports = function(io) {
     manager.on('setPanelMap', pDM.setPanelMap);
     manager.on('managePanel', pDM.managePanel);
     manager.on('removePanel', pDM.removePanel);
-    manager.on('startDataCreate', pDM.startDataCreate);
+    //manager.on('startDataCreate', pDM.startDataCreate);
     manager.on('stopDataCreate', pDM.stopDataCreate);
 
     //socket
@@ -140,11 +140,10 @@ module.exports = function(io) {
         socket.on('addPanelData', function(data) {
             var newPanelData = new PanelData({
                 panelId: data.id,
-                current: data.current,
-                voltage: data.voltage,
-                light: data.light,
-                temperature: data.temperature,
-                moisture: data.moisture,
+                akim: data.current,
+                gerilim: data.voltage,
+                sicaklik: data.temperature,
+                nem: data.moisture,
                 date: data.date
             });
 
@@ -179,11 +178,11 @@ module.exports = function(io) {
                 if(err) {
                     console.error(err);
                 } else {
-                    p.name = panel.name;
-                    p.countryCode = panel.countryCode;
-                    p.cityCode = panel.cityCode;
-                    p.coordinates = panel.coordinates;
-                    p.status = panel.status;
+                    p.name      = panel.name;
+                    p.status    = panel.status;
+                    p.macAddr   = panel.macAddr;
+                    p.location  = panel.location;
+                    p.ipAddr    = '-';
 
                     p.save(function(err){
                         if(err) {
@@ -199,6 +198,7 @@ module.exports = function(io) {
         });
 
         socket.on('removePanel', function(panel) {
+
             Panel.find({_id:panel._id}).remove(function(err){
                 if(err) {
                     console.error(err);
@@ -216,9 +216,9 @@ module.exports = function(io) {
             });
         });
 
-        socket.on('startDataCreate', function(){
+        /*socket.on('startDataCreate', function(){
             manager.emit('startDataCreate');
-        });
+        });*/
 
         socket.on('stopDataCreate', function(){
             manager.emit('stopDataCreate');
@@ -246,35 +246,82 @@ module.exports = function(io) {
             });
         }
 
+        /*
+        * Bu değişken panellerin mac adresiyle panel_id değerlerini tutuyor.
+        * {macAddr: panelId, macAddr: panelId}   formatında tutuluyor.
+        * kayıtlar dinamik olarak ekleniyor.
+        * güneş panelinden ilk kez veri geldiğinde panelin mac adresinden veritabanından panel idsini bulup buraya ekleniyor
+        * */
+        var macToPanelId = {};
+
         socket.on('verileriKaydetDagit',function(veriler){
 
-            console.log(veriler);
+            if(veriler.secKey != (veriler.akim+''+veriler.gerilim+''+veriler.sicaklik+''+veriler.nem)){
 
-            if((veriler.panelId).length > 3){
-
-                var newPanelData = new PanelData({
-                    panelId: veriler.panelId,
-                    current: veriler.akim,
-                    voltage: veriler.gerilim,
-                    light: '15',
-                    temperature: veriler.sicaklik,
-                    moisture: veriler.nem,
-                    date: new Date()
-                });
-
-                newPanelData.save(function(err){
-                    if(err) {
-                        console.error(err);
-                    }
-                });
-
-                io.emit('retrievePanelData', newPanelData);
+                console.log('hatali gonderim!!');
 
             }else{
-                console.log("HATA!");
+
+                /* Eğer mac adresi herhangi bir panelid le eşleşmiyorsa veritabanından panelidyi kontrol edip macToPanelId dizisine değeri tanımlıyor*/
+                if(!macToPanelId[veriler.macAddr]){
+
+                    Panel.findOne({macAddr: veriler.macAddr}, function(err, res){
+
+                        if(err) {
+                            console.error(err);
+                        } else {
+                            macToPanelId[veriler.macAddr] = res._id;
+                            console.log(veriler.macAddr+' mac adresi ' + res._id + ' panelId\'si ile eşleştirildi.');
+                        }
+                    });
+
+                }else{
+
+                    var newPanelData = new PanelData({
+                        panelId     : macToPanelId[veriler.macAddr], //veriler.panelId,
+                        akim        : veriler.akim,
+                        gerilim     : veriler.gerilim,
+                        sicaklik    : veriler.sicaklik,
+                        nem         : veriler.nem,
+                        date        : new Date()
+                    });
+                    newPanelData.save(function(err){
+                        if(err) {
+                            console.error(err);
+                        }
+                    });
+                    io.emit('retrievePanelData', newPanelData);
+                }
+
             }
+        });
+
+
+        socket.on('ipAdresiGuncelle',function(panel){
+
+
+            Panel.findOne({macAddr: panel.macAddr}, function(err, res){
+
+                if(err) {
+                    console.error(err);
+                } else {
+
+                    res.ipAddr = panel.ipAddr;
+
+                    res.save(function (err) {
+                        if(err) {
+                            console.error('ERROR!');
+                        }else{
+                            console.error(panel.macAddr+' mac adresi '+panel.ipAddr+' ip\'si ile eşleştirildi.');
+                        }
+                    });
+
+                }
+
+            });
 
         });
+
 
     });
 
