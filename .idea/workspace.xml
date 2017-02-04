@@ -2,132 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f86700eb-9fc8-4b9f-9990-e484d403645f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/css/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/css/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/css/ref.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/css/source-sans-pro.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/images/splash.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/api/js/ref.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/js/adapters/standalone-framework.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/highcharts/js/adapters/standalone-framework.src.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/highcharts/api/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-114x114.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-114x114.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-120x120.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-120x120.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-144x144.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-144x144.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-152x152.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-152x152.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-180x180.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-180x180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-57x57.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-57x57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-60x60.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-60x60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-72x72.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-72x72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-76x76.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/apple-touch-icon-76x76.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/favicon-160x160.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/favicon-160x160.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/favicon-16x16.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/favicon-16x16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/favicon-192x192.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/favicon-192x192.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/favicon-32x32.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/favicon-32x32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/favicon-96x96.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/favicon-96x96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/sprite.png" afterPath="$PROJECT_DIR$/public/highcharts/api/images/sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/gfx/vml-radial-gradient.png" afterPath="$PROJECT_DIR$/public/highcharts/gfx/vml-radial-gradient.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/highslide/close.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/highslide/close.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/highslide/closeX.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/highslide/closeX.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/highslide/outlines/rounded-white.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/highslide/outlines/rounded-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/highslide/resize.gif" afterPath="$PROJECT_DIR$/public/highcharts/graphics/highslide/resize.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/highslide/zoomout.cur" afterPath="$PROJECT_DIR$/public/highcharts/graphics/highslide/zoomout.cur" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/meteogram-symbols-30px.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/meteogram-symbols-30px.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/search.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/search.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/skies.jpg" afterPath="$PROJECT_DIR$/public/highcharts/graphics/skies.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/snow.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/snow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/graphics/sun.png" afterPath="$PROJECT_DIR$/public/highcharts/graphics/sun.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/panelData.js" afterPath="$PROJECT_DIR$/model/panelData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/highcharts/api/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/css/jquery-ui.min.css" afterPath="$PROJECT_DIR$/public/highcharts/api/css/jquery-ui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/highcharts.html" afterPath="$PROJECT_DIR$/public/highcharts/api/highcharts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/images/Highcharts.svg" afterPath="$PROJECT_DIR$/public/highcharts/api/images/Highcharts.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/js/highcharts.json" afterPath="$PROJECT_DIR$/public/highcharts/api/js/highcharts.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/js/jquery-1.11.3.min.js" afterPath="$PROJECT_DIR$/public/highcharts/api/js/jquery-1.11.3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/api/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/public/highcharts/api/js/jquery-ui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-column-interactive/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-column-interactive/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-column-null-values/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-column-null-values/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-column-stacking-grouping/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-column-stacking-grouping/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-pie-donut/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-pie-donut/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-pie/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-pie/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/3d-scatter-draggable/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/3d-scatter-draggable/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-basic/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-basic/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-inverted/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-inverted/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-missing/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-missing/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-negative/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-negative/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-stacked-percent/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-stacked-percent/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/area-stacked/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/area-stacked/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/arearange-line/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/arearange-line/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/arearange/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/arearange/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/areaspline/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/areaspline/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/bar-basic/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/bar-basic/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/bar-negative-stack/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/bar-negative-stack/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/bar-stacked/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/bar-stacked/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/box-plot/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/box-plot/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/bubble-3d/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/bubble-3d/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/bubble/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/bubble/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-basic/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-basic/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-drilldown/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-drilldown/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-negative/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-negative/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-parsed/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-parsed/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-placement/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-placement/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-rotated-labels/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-rotated-labels/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-stacked-and-grouped/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-stacked-and-grouped/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-stacked-percent/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-stacked-percent/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/column-stacked/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/column-stacked/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/columnrange/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/columnrange/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo-dual-axes/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo-dual-axes/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo-meteogram/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo-meteogram/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo-multi-axes/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo-multi-axes/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo-regression/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo-regression/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo-timeline/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo-timeline/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/combo/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/combo/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/dynamic-click-to-add/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/dynamic-click-to-add/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/dynamic-master-detail/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/dynamic-master-detail/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/dynamic-update/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/dynamic-update/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/error-bar/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/error-bar/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/funnel/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/funnel/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-activity/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-activity/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-clock/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-clock/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-dual/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-dual/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-solid/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-solid/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-speedometer/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-speedometer/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/gauge-vu-meter/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/gauge-vu-meter/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/heatmap-canvas/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/heatmap-canvas/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/heatmap/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/heatmap/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/line-ajax/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/line-ajax/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/line-basic/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/line-basic/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/line-labels/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/line-labels/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/line-log-axis/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/line-log-axis/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/line-time-series/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/line-time-series/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-basic/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-basic/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-donut/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-donut/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-drilldown/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-drilldown/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-gradient/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-gradient/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-legend/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-legend/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-monochrome/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-monochrome/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pie-semi-circle/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pie-semi-circle/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/polar-spider/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/polar-spider/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/polar-wind-rose/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/polar-wind-rose/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/polar/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/polar/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/polygon/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/polygon/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/pyramid/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/pyramid/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/renderer/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/renderer/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/scatter/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/scatter/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/sparkline/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/sparkline/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/spline-inverted/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/spline-inverted/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/spline-irregular-time/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/spline-irregular-time/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/spline-plot-bands/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/spline-plot-bands/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/spline-symbols/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/spline-symbols/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/synchronized-charts/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/synchronized-charts/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/treemap-coloraxis/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/treemap-coloraxis/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/treemap-large-dataset/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/treemap-large-dataset/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/treemap-with-levels/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/treemap-with-levels/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/examples/waterfall/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/examples/waterfall/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/highcharts/index.htm" afterPath="$PROJECT_DIR$/public/highcharts/index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/manage.js" afterPath="$PROJECT_DIR$/routes/manage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <ignored path="nodejs-solar-panel-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,7 +28,7 @@
       <file leaf-file-name="manage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/manage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="5115">
               <caret line="341" column="22" selection-start-line="341" selection-start-column="22" selection-end-line="341" selection-end-column="22" />
               <folding>
                 <marker date="1486165102000" expanded="true" signature="1456:2021" ph="{...}" />
@@ -172,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -182,6 +58,16 @@
                 <marker date="1486166331000" expanded="true" signature="11716:11730" ph="..." />
                 <marker date="1486166331000" expanded="true" signature="11806:11825" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -201,10 +87,10 @@
         <option value="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/properties.js" />
         <option value="$PROJECT_DIR$/views/manage.jade" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/manage.js" />
         <option value="$PROJECT_DIR$/model/panelData.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -249,7 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,14 +197,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -388,17 +274,18 @@
       <workItem from="1484687974735" duration="34000" />
       <workItem from="1485347387507" duration="5473000" />
       <workItem from="1486155328700" duration="9243000" />
+      <workItem from="1486166932690" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49206000" />
+    <option name="totallyTimeSpent" value="49285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25605816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26009694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,33 +560,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-theme.min.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-theme.css.map">
       <provider editor-type-id="sourcemapFileViewerProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-theme.css.map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-theme.css">
@@ -710,13 +597,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="0" column="160378" selection-start-line="0" selection-start-column="160378" selection-end-line="0" selection-end-column="160378" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap.css">
@@ -751,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,15 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/manage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="5115">
           <caret line="341" column="22" selection-start-line="341" selection-start-column="22" selection-end-line="341" selection-end-column="22" />
           <folding>
             <marker date="1486165102000" expanded="true" signature="1456:2021" ph="{...}" />
@@ -829,6 +704,14 @@
             <marker date="1486166331000" expanded="true" signature="11716:11730" ph="..." />
             <marker date="1486166331000" expanded="true" signature="11806:11825" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
