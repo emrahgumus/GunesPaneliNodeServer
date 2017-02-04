@@ -60,6 +60,7 @@ block content
             }
         });
 
+
         socket.emit('retrievePanelList', 0, false);
 
 
@@ -90,10 +91,10 @@ block content
             row += '<th scope="row">' + (index + 1) + '</th>';
             row += '<td>' + panel.name + '</td>';
             row += '<td>';
-            row += '<button type="button" class="btn btn-default btn-xs" aria-label="Left Align" id="' + panel._id.toString() + '_show">';
+            row += '<button type="button" class="anlik btn btn-default btn-xs" aria-label="Left Align" id="' + panel._id.toString() + '_show">';
             row += '<span class="glyphicon glyphicon-eye-close" aria-hidden="true" id="' + panel._id.toString() + '_glyph"></span>';
             row += '</button>';
-            row += '</td>';
+            row += '<button type="button" class="gecmis btn btn-default btn-xs gecmis-'+panel._id.toString()+'" onClick="allDataShow(\'' + panel._id.toString() + '\')" style="margin-left:5px;"><span class="glyphicon glyphicon-signal"></span></button></td>';
             row += '</tr>';
             $('#panelTable').find('> tbody:last-child').append(row);
             $('#' + panel._id.toString() + '_show').click(function () {
@@ -104,10 +105,10 @@ block content
         /* Verileri gösterilecek panelleri seçiyoruz */
         function showPanelDetail(panel) {
             clearChart();
-            $('#panelTable').find('button').removeClass('btn-success').addClass('btn-default');
+            $('#panelTable').find('button.anlik').removeClass('btn-success').addClass('btn-default');
             $('#' + panel._id.toString() + '_show').removeClass('btn-default').addClass('btn-success');
 
-            $('#panelTable').find('span').removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+            $('#panelTable').find('button.anlik span').removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
             $('#' + panel._id.toString() + '_glyph').removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
 
             selectedPanelId = panel._id;
@@ -289,4 +290,106 @@ block content
                             selectedDate, nextDay);
                 }
             }
+        });
+
+
+        function allDataShow(panelId) {
+
+
+            $('#panelTable').find('button.gecmis').removeClass('btn-success').addClass('btn-default');
+            $('button.gecmis-'+panelId).removeClass('btn-default').addClass('btn-success');
+
+
+            $('#chartTitle').html('Tüm Veriler');
+            $('#chartDiv').html('');
+
+            socket.emit('allDataShow', panelId, false);
+
+        }
+
+
+
+        socket.on('allShowDataListen', function (retData) {
+
+            //console.log(retData);
+            var chartData = [];
+
+            for (var i in retData) {
+
+                //console.log(retData[i]);
+
+                chartData[i] = {
+                    name: retData[i]._id.month + '-' + retData[i]._id.year,
+                    y: retData[i].ortAkim,
+                    drilldown: retData[i]._id.month + '-' + retData[i]._id.year
+                };
+
+            }
+
+            console.log(chartData);
+
+            $('#chartDiv').highcharts({
+
+                chart: {type: 'column'},
+                title: {text: 'Panelinin Ortalama Verileri'},
+                subtitle: {text: 'Aya ait ortalama günlük verileri görmek için üzerine tıklayın.'},
+                xAxis: {type: 'category'},
+                yAxis: {
+                    title: {
+                        text: 'Üretilen toplam enerji miktarı'
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        borderWidth: 0,
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.y:.1f} kW/saat'
+                        }
+                    }
+                },
+
+                tooltip: {
+                    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f} kW/saat</b><br/>'
+                },
+
+                series: [{
+                    name: 'Ortalama Veriler',
+                    colorByPoint: true,
+                    data: chartData
+                }],
+                drilldown: {
+                    series: [{
+                        name: '2-2017',
+                        id: '2-2017',
+                        data: [
+                            [
+                                'v11.0',
+                                24.13
+                            ],
+                            [
+                                'v8.0',
+                                17.2
+                            ],
+                            [
+                                'v9.0',
+                                8.11
+                            ],
+                            [
+                                'v10.0',
+                                5.33
+                            ]
+                        ]
+                    }]
+                }
+
+
+
+
+            });
+
         });

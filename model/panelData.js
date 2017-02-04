@@ -13,3 +13,4 @@ var panelDataSchema = mongoose.Schema({
 });
 
 mongoose.model('PanelData', panelDataSchema);
+

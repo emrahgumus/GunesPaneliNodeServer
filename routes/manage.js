@@ -254,7 +254,7 @@ module.exports = function(io) {
         * */
         var macToPanelId = {};
 
-        socket.on('verileriKaydetDagit',function(veriler){
+        socket.on('verileriKaydetDagit', function(veriler){
 
             if(veriler.secKey != (veriler.akim+''+veriler.gerilim+''+veriler.sicaklik+''+veriler.nem)){
 
@@ -298,10 +298,7 @@ module.exports = function(io) {
 
 
         socket.on('ipAdresiGuncelle',function(panel){
-
-
             Panel.findOne({macAddr: panel.macAddr}, function(err, res){
-
                 if(err) {
                     console.error(err);
                 } else {
@@ -315,12 +312,44 @@ module.exports = function(io) {
                             console.error(panel.macAddr+' mac adresi '+panel.ipAddr+' ip\'si ile eşleştirildi.');
                         }
                     });
-
                 }
-
             });
+        });
+
+
+
+        socket.on('allDataShow', function(panel){
+
+            //console.log(panel);
+
+            PanelData.aggregate({
+                $match: {
+                    panelId: mongoose.Types.ObjectId(panel)
+                }
+            })
+                .group({
+                    _id: {
+                        month: { $month: "$date" },
+                        year: { $year: "$date" }
+                    },
+                    ortAkim: {$avg: '$akim'},
+                    ortGerilim: {$avg: '$gerilim'},
+                    ortSicaklik: {$avg: '$sicaklik'},
+                    totalNem: {$sum: '$nem'},
+                })
+                //.sort("-_id.month")
+                .exec(function (err, ret) {
+                    //console.log(ret);
+
+                    io.emit('allShowDataListen', ret);
+                });
+
+
+
 
         });
+
+
 
 
     });
